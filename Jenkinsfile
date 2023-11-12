@@ -21,7 +21,7 @@ pipeline {
         }
         stage('slack') {
             steps {
-                slackSend channel: '#automations', message: 'This is for Jenkins'
+                slackSend message: 'This is for Jenkins'
             }
         }
     }
