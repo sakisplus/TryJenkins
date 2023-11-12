@@ -16,7 +16,6 @@ pipeline {
         }
         stage('hello') {
             steps {
-                ls
                 echo 'Say hello'
             }
         }
