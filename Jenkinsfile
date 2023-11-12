@@ -1,7 +1,7 @@
 pipeline {
     agent any
     triggers {
-        pollSCM('*/5 * * * *')
+        pollSCM('H/0 * * * *')
     }
     stages {
         stage('test') {
@@ -17,6 +17,11 @@ pipeline {
         stage('hello') {
             steps {
                 echo 'Say hello'
+            }
+        }
+        stage('slack') {
+            steps {
+                slackSend channel: '#automations', message: 'This is for Jenkins'
             }
         }
     }
