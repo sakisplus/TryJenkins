@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('test') {
             steps {
-                cat README.md
+                ls
                 sh 'node --version'
             }
         }
